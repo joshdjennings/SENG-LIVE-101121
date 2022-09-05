@@ -7,5 +7,10 @@ class ApplicationController < Sinatra::Base
     { message: "Welcome to Sinatra" }.to_json
   end
   
+  get "/patients" do
+    patients = Patient.all
+    patients.to_json
+  end
+
 
 end
