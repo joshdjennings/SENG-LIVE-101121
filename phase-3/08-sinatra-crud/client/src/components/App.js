@@ -60,15 +60,17 @@ function App() {
       headers:{'Content-Type':'application/json'}
     })
     .then(res => res.json())
-    .then(data => {
+    .then(() => 
       setPatients(patients.filter(p => p.id !== id))
-    })
+    )
   }
   return (
     <div className="App">
+      {console.log(patients)}
 
       <div>
       <CreateForm postPatient={postPatient} clinics={clinics}/>
+      <p>Hi</p>
       {patients.map(p => <Card patient={p} patchPet={patchPet} handleDelete={handleDelete} key={`${p.id}${p.name}`}/>)}
       </div> 
     </div> 

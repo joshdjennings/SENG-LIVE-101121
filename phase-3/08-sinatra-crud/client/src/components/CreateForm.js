@@ -51,4 +51,4 @@ function CreateForm({postPatient, clinics}){
     )
 }
 
-export default CreateForm
+export default CreateForm;
